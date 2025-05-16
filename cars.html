@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Våra bilar - Exotiska Bilar</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><span class="logo-primary">Exotiska</span> Bilar</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="cars.html" class="active">Bilar</a></li>
+                    <li><a href="about.html">Om oss</a></li>
+                </ul>
+            </nav>
+            <button class="btn primary-btn">Boka visning</button>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Våra exotiska bilar</h1>
+                <p>Utforska vår samling av handplockade exotiska bilar från världens främsta tillverkare.</p>
+            </div>
+        </section>
+
+        <section class="car-filters">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label for="brand">Märke</label>
+                        <select id="brand">
+                            <option value="">Alla märken</option>
+                            <option value="ferrari">Ferrari</option>
+                            <option value="lamborghini">Lamborghini</option>
+                            <option value="mclaren">McLaren</option>
+                            <option value="porsche">Porsche</option>
+                            <option value="aston-martin">Aston Martin</option>
+                            <option value="bugatti">Bugatti</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price">Pris upp till</label>
+                        <select id="price">
+                            <option value="">Alla priser</option>
+                            <option value="3000000">3 000 000 kr</option>
+                            <option value="5000000">5 000 000 kr</option>
+                            <option value="10000000">10 000 000 kr</option>
+                            <option value="20000000">20 000 000 kr</option>
+                            <option value="30000000">30 000 000 kr</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="year">Årsmodell</label>
+                        <select id="year">
+                            <option value="">Alla år</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="older">Äldre</option>
+                        </select>
+                    </div>
+                    <button class="btn primary-btn">Filtrera</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cars-listing">
+            <div class="container">
+                <div class="car-grid">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Ferrari 488 GTB">
+                        </div>
+                        <div class="car-details">
+                            <h3>Ferrari 488 GTB</h3>
+                            <p class="car-price">3 950 000 kr</p>
+                            <p class="car-specs">3.9L V8 Twin-Turbo, 670 hk, 0-100 km/h: 3.0s</p>
+                            <div class="car-actions">
+                                <button class="btn outline-btn small">Mer info</button>
+                                <button class="btn primary-btn small">Boka visning</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Lamborghini Huracán">
+                        </div>
+                        <div class="car-details">
+                            <h3>Lamborghini Huracán</h3>
+                            <p class="car-price">4 250 000 kr</p>
+                            <p class="car-specs">5.2L V10, 640 hk, 0-100 km/h: 2.9s</p>
+                            <div class="car-actions">
+                                <button class="btn outline-btn small">Mer info</button>
+                                <button class="btn primary-btn small">Boka visning</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="McLaren 720S">
+                        </div>
+                        <div class="car-details">
+                            <h3>McLaren 720S</h3>
+                            <p class="car-price">3 850 000 kr</p>
+                            <p class="car-specs">4.0L V8 Twin-Turbo, 720 hk, 0-100 km/h: 2.9s</p>
+                            <div class="car-actions">
+                                <button class="btn outline-btn small">Mer info</button>
+                                <button class="btn primary-btn small">Boka visning</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Porsche 911 GT3 RS">
+                        </div>
+                        <div class="car-details">
+                            <h3>Porsche 911 GT3 RS</h3>
+                            <p class="car-price">2 950 000 kr</p>
+                            <p class="car-specs">4.0L Flat-6, 520 hk, 0-100 km/h: 3.2s</p>
+                            <div class="car-actions">
+                                <button class="btn outline-btn small">Mer info</button>
+                                <button class="btn primary-btn small">Boka visning</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Aston Martin DBS">
+                        </div>
+                        <div class="car-details">
+                            <h3>Aston Martin DBS</h3>
+                            <p class="car-price">4 100 000 kr</p>
+                            <p class="car-specs">5.2L V12 Twin-Turbo, 725 hk, 0-100 km/h: 3.4s</p>
+                            <div class="car-actions">
+                                <button class="btn outline-btn small">Mer info</button>
+                                <button class="btn primary-btn small">Boka visning</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1600712242805-5f78671b24da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Bugatti Chiron">
+                        </div>
+                        <div class="car-details">
+                            <h3>Bugatti Chiron</h3>
+                            <p class="car-price">28 500 000 kr</p>
+                            <p class="car-specs">8.0L W16 Quad-Turbo, 1500 hk, 0-100 km/h: 2.4s</p>
+                            <div class="car-actions">
+                                <button class="btn outline-btn small">Mer info</button>
+                                <button class="btn primary-btn small">Boka visning</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Koenigsegg Jesko">
+                        </div>
+                        <div class="car-details">
+                            <h3>Koenigsegg Jesko</h3>
+                            <p class="car-price">32 000 000 kr</p>
+                            <p class="car-specs">5.0L V8 Twin-Turbo, 1600 hk, 0-100 km/h: 2.5s</p>
+                            <div class="car-actions">
+                                <button class="btn outline-btn small">Mer info</button>
+                                <button class="btn primary-btn small">Boka visning</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1632245889029-e406faaa34cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Ferrari SF90 Stradale">
+                        </div>
+                        <div class="car-details">
+                            <h3>Ferrari SF90 Stradale</h3>
+                            <p class="car-price">5 200 000 kr</p>
+                            <p class="car-specs">4.0L V8 Hybrid, 1000 hk, 0-100 km/h: 2.5s</p>
+                            <div class="car-actions">
+                                <button class="btn outline-btn small">Mer info</button>
+                                <button class="btn primary-btn small">Boka visning</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">© 2025 Exotiska Bilar AB. Alla rättigheter förbehållna.</p>
+            <div class="footer-links">
+                <a href="#">Integritetspolicy</a>
+                <a href="#">Villkor</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
