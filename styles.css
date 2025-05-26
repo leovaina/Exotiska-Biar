@@ -1,157 +1,231 @@
-/* Enkel CSS för bilhemsida */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilhemsida</title>
+    <style>
+        /* Enkel CSS för bilhemsida */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        /* Header */
+        header {
+            background: white;
+            padding: 1rem 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* Header */
-header {
-    background: white;
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
+        /* Button */
+        .btn {
+            background: #e62b4a;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
 
-nav a {
-    text-decoration: none;
-    color: #333;
-}
+        .btn:hover {
+            background: #d12543;
+        }
 
-/* Button */
-.btn {
-    background: #e62b4a;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-}
+        /* Hero */
+        .hero {
+            background: black;
+            color: white;
+            padding: 4rem 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
 
-.btn:hover {
-    background: #d12543;
-}
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
 
-/* Hero */
-.hero {
-    background: black;
-    color: white;
-    padding: 4rem 0;
-}
+        .hero img {
+            width: 100%;
+            border-radius: 8px;
+        }
 
-.hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-}
+        /* Cars Section */
+        .cars {
+            padding: 4rem 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
 
-.hero img {
-    width: 100%;
-    border-radius: 8px;
-}
+        .car-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-/* Cars Section */
-.cars {
-    padding: 4rem 0;
-}
+        .car-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
-.car-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
+        .car-details {
+            padding: 1rem;
+        }
 
-.car-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-}
+        .car-price {
+            color: #e62b4a;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
 
-.car-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
+        /* Contact */
+        .contact {
+            background: #f5f5f5;
+            padding: 4rem 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.car-details {
-    padding: 1rem;
-}
+        /* Footer */
+        footer {
+            border-top: 1px solid #ddd;
+            padding: 2rem 20px;
+            text-align: center;
+            color: #666;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.car-price {
-    color: #e62b4a;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-}
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .car-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">BilCenter</div>
+        <nav>
+            <ul>
+                <li><a href="#hem">Hem</a></li>
+                <li><a href="#bilar">Bilar</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+        <a href="#kontakt" class="btn">Kontakta oss</a>
+    </header>
 
-/* Contact */
-.contact {
-    background: #f5f5f5;
-    padding: 4rem 0;
-    text-align: center;
-}
+    <section class="hero">
+        <div>
+            <h1>Hitta din drömbil</h1>
+            <p>Vi har ett stort utbud av kvalitetsbilar till bra priser. Välkommen att titta runt!</p>
+            <a href="#bilar" class="btn">Se våra bilar</a>
+        </div>
+        <img src="/placeholder.svg?height=300&width=400" alt="Bil">
+    </section>
 
-/* Footer */
-footer {
-    border-top: 1px solid #ddd;
-    padding: 2rem 0;
-    text-align: center;
-    color: #666;
-}
+    <section class="cars" id="bilar">
+        <h2>Våra bilar</h2>
+        <div class="car-grid">
+            <div class="car-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Volvo V70">
+                <div class="car-details">
+                    <h3>Volvo V70</h3>
+                    <p>2018 • 45 000 km • Bensin</p>
+                    <div class="car-price">249 000 kr</div>
+                    <a href="#" class="btn">Läs mer</a>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="BMW 3-serie">
+                <div class="car-details">
+                    <h3>BMW 3-serie</h3>
+                    <p>2019 • 32 000 km • Diesel</p>
+                    <div class="car-price">329 000 kr</div>
+                    <a href="#" class="btn">Läs mer</a>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Audi A4">
+                <div class="car-details">
+                    <h3>Audi A4</h3>
+                    <p>2020 • 28 000 km • Hybrid</p>
+                    <div class="car-price">389 000 kr</div>
+                    <a href="#" class="btn">Läs mer</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero .container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .car-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    nav ul {
-        display: none;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-}
+    <section class="contact" id="kontakt">
+        <h2>Kontakta oss</h2>
+        <p>Har du frågor eller vill boka en provkörning? Hör av dig till oss!</p>
+        <p><strong>Telefon:</strong> 08-123 456 78</p>
+        <p><strong>E-post:</strong> info@bilcenter.se</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 BilCenter. Alla rättigheter förbehållna.</p>
+    </footer>
+</body>
+</html>
