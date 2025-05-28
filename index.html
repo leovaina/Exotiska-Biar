@@ -5,169 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exotiska Bilar - Lyxbilar till salu</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome för ikoner -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html"><span class="logo-primary">Exotiska</span> Bilar</a>
-            </div>
-            <button class="mobile-menu-btn" aria-label="Öppna meny">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Hem</a></li>
-                    <li><a href="cars.html">Bilar</a></li>
-                    <li><a href="about.html">Om oss</a></li>
-                    <li class="nav-cta"><a href="#" class="btn primary-btn">Boka visning</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="logo"><a href="index.html"><span class="logo-primary">Exotiska</span> Bilar</a></div>
+        <nav><ul><li><a href="index.html" class="active">Hem</a></li><li><a href="cars.html">Bilar</a></li><li><a href="about.html">Om oss</a></li></ul></nav>
+        <button class="btn primary-btn">Boka visning</button>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Upptäck lyxen av exotiska bilar</h1>
-                    <p>Vi erbjuder de mest exklusiva och sällsynta bilarna på marknaden.</p>
-                    <div class="hero-buttons">
-                        <a href="cars.html" class="btn primary-btn">Utforska bilar <i class="fas fa-chevron-right"></i></a>
-                        <a href="about.html" class="btn outline-btn">Kontakta oss</a>
+    <section class="hero">
+        <div>
+            <h1>Upptäck lyxen av exotiska bilar</h1>
+            <p>Vi erbjuder de mest exklusiva och sällsynta bilarna på marknaden. Från Ferrari till Lamborghini, vi har allt för den kräsne bilentusiasten.</p>
+            <div class="hero-buttons">
+                <a href="cars.html" class="btn primary-btn">Utforska bilar <i class="fas fa-chevron-right"></i></a>
+                <a href="about.html" class="btn outline-btn">Kontakta oss</a>
+            </div>
+        </div>
+        <div><img src="https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Exotisk sportbil"></div>
+    </section>
+
+    <section class="featured-cars">
+        <div class="section-header">
+            <h2>Utvalda bilar</h2>
+            <p>Upptäck några av våra mest exklusiva modeller</p>
+        </div>
+        <div class="car-grid">
+            <div class="car-card">
+                <div class="car-image"><img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ferrari 488 GTB"></div>
+                <div class="car-details">
+                    <h3>Ferrari 488 GTB</h3>
+                    <p class="car-price">3 950 000 kr</p>
+                    <p class="car-specs">3.9L V8 Twin-Turbo, 670 hk, 0-100 km/h: 3.0s</p>
+                    <div class="car-actions">
+                        <button class="btn outline-btn small">Mer info</button>
+                        <button class="btn primary-btn small">Boka visning</button>
                     </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Exotisk sportbil">
                 </div>
             </div>
-        </section>
-
-        <section class="featured-cars">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Utvalda bilar</h2>
-                    <p>Upptäck några av våra mest exklusiva modeller</p>
-                </div>
-                
-                <div class="car-grid">
-                    <div class="car-card">
-                        <div class="car-image">
-                            <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Ferrari 488 GTB">
-                        </div>
-                        <div class="car-details">
-                            <h3>Ferrari 488 GTB</h3>
-                            <p class="car-price">3 950 000 kr</p>
-                            <p class="car-specs">3.9L V8 Twin-Turbo, 670 hk</p>
-                            <div class="car-actions">
-                                <button class="btn outline-btn small">Mer info</button>
-                                <button class="btn primary-btn small">Boka visning</button>
-                            </div>
-                        </div>
+            <div class="car-card">
+                <div class="car-image"><img src="https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lamborghini Huracán"></div>
+                <div class="car-details">
+                    <h3>Lamborghini Huracán</h3>
+                    <p class="car-price">4 250 000 kr</p>
+                    <p class="car-specs">5.2L V10, 640 hk, 0-100 km/h: 2.9s</p>
+                    <div class="car-actions">
+                        <button class="btn outline-btn small">Mer info</button>
+                        <button class="btn primary-btn small">Boka visning</button>
                     </div>
-
-                    <div class="car-card">
-                        <div class="car-image">
-                            <img src="https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Lamborghini Huracán">
-                        </div>
-                        <div class="car-details">
-                            <h3>Lamborghini Huracán</h3>
-                            <p class="car-price">4 250 000 kr</p>
-                            <p class="car-specs">5.2L V10, 640 hk</p>
-                            <div class="car-actions">
-                                <button class="btn outline-btn small">Mer info</button>
-                                <button class="btn primary-btn small">Boka visning</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="car-card">
-                        <div class="car-image">
-                            <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="McLaren 720S">
-                        </div>
-                        <div class="car-details">
-                            <h3>McLaren 720S</h3>
-                            <p class="car-price">3 850 000 kr</p>
-                            <p class="car-specs">4.0L V8 Twin-Turbo, 720 hk</p>
-                            <div class="car-actions">
-                                <button class="btn outline-btn small">Mer info</button>
-                                <button class="btn primary-btn small">Boka visning</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="center-button">
-                    <a href="cars.html" class="btn primary-btn">Visa alla bilar</a>
                 </div>
             </div>
-        </section>
-
-        <section class="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Våra tjänster</h2>
-                    <p>Vi erbjuder mer än bara försäljning av exotiska bilar</p>
-                </div>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-car"></i>
-                        </div>
-                        <h3>Försäljning</h3>
-                        <p>Vi erbjuder ett exklusivt urval av de mest eftertraktade exotiska bilarna.</p>
+            <div class="car-card">
+                <div class="car-image"><img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="McLaren 720S"></div>
+                <div class="car-details">
+                    <h3>McLaren 720S</h3>
+                    <p class="car-price">3 850 000 kr</p>
+                    <p class="car-specs">4.0L V8 Twin-Turbo, 720 hk, 0-100 km/h: 2.9s</p>
+                    <div class="car-actions">
+                        <button class="btn outline-btn small">Mer info</button>
+                        <button class="btn primary-btn small">Boka visning</button>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Service</h3>
-                        <p>Våra certifierade tekniker säkerställer att din bil får den bästa vården.</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-exchange-alt"></i>
-                        </div>
-                        <h3>Inbyte</h3>
-                        <p>Vi erbjuder konkurrenskraftiga inbytespriser för din nuvarande bil.</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-money-bill-wave"></i>
-                        </div>
-                        <h3>Finansiering</h3>
-                        <p>Vi samarbetar med ledande finansinstitut för skräddarsydda lösningar.</p>
-                    </div>
-                </div>
-                
-                <div class="center-button">
-                    <a href="about.html" class="btn primary-btn">Läs mer om oss</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p class="copyright">© 2025 Exotiska Bilar AB</p>
-                <div class="footer-links">
-                    <a href="#">Integritetspolicy</a>
-                    <a href="#">Villkor</a>
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="center-button"><a href="cars.html" class="btn primary-btn">Visa alla bilar</a></div>
+    </section>
 
-    <script>
-    </script>
+    <section class="services">
+        <div class="section-header">
+            <h2>Våra tjänster</h2>
+            <p>Vi erbjuder mer än bara försäljning av exotiska bilar</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-car"></i></div>
+                <h3>Försäljning</h3>
+                <p>Vi erbjuder ett exklusivt urval av de mest eftertraktade exotiska bilarna på marknaden.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3>Service</h3>
+                <p>Våra certifierade tekniker säkerställer att din exotiska bil får den bästa möjliga vården.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+                <h3>Inbyte</h3>
+                <p>Vi erbjuder konkurrenskraftiga inbytespriser för din nuvarande bil när du uppgraderar.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-money-bill-wave"></i></div>
+                <h3>Finansiering</h3>
+                <p>Vi samarbetar med ledande finansinstitut för att erbjuda skräddarsydda finansieringslösningar.</p>
+            </div>
+        </div>
+        <div class="center-button"><a href="about.html" class="btn primary-btn">Läs mer om oss</a></div>
+    </section>
+
+    <footer>
+        <p>© 2025 Exotiska Bilar AB. Alla rättigheter förbehållna.</p>
+        <div class="footer-links">
+            <a href="#">Integritetspolicy</a>
+            <a href="#">Villkor</a>
+        </div>
+    </footer>
 </body>
 </html>
