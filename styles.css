@@ -1,231 +1,514 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilhemsida</title>
-    <style>
-        /* Enkel CSS för bilhemsida */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
 
-        /* Header */
-        header {
-            background: white;
-            padding: 1rem 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* Layout Components */
+header, .hero, .featured-cars, .services, .page-header, .about-story, .team, .contact, .car-filters, .cars-listing, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+}
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+/* Header Styles */
+header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+.logo a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-        }
+.logo-primary {
+    color: #e74c3c;
+}
 
-        /* Button */
-        .btn {
-            background: #e62b4a;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 
-        .btn:hover {
-            background: #d12543;
-        }
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
-        /* Hero */
-        .hero {
-            background: black;
-            color: white;
-            padding: 4rem 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
+nav a:hover,
+nav a.active {
+    color: #e74c3c;
+}
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+/* Button Styles */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.3s;
+}
 
-        .hero img {
-            width: 100%;
-            border-radius: 8px;
-        }
+.primary-btn {
+    background: #e74c3c;
+    color: white;
+}
 
-        /* Cars Section */
-        .cars {
-            padding: 4rem 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.primary-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
 
-        .car-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+.outline-btn {
+    background: transparent;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+}
 
-        .car-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-        }
+.outline-btn:hover {
+    background: #e74c3c;
+    color: white;
+}
 
-        .car-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
 
-        .car-details {
-            padding: 1rem;
-        }
+.full-width {
+    width: 100%;
+}
 
-        .car-price {
-            color: #e62b4a;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-        }
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
 
-        /* Contact */
-        .contact {
-            background: #f5f5f5;
-            padding: 4rem 20px;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
 
-        /* Footer */
-        footer {
-            border-top: 1px solid #ddd;
-            padding: 2rem 20px;
-            text-align: center;
-            color: #666;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .car-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            nav ul {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="logo">BilCenter</div>
-        <nav>
-            <ul>
-                <li><a href="#hem">Hem</a></li>
-                <li><a href="#bilar">Bilar</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-        </nav>
-        <a href="#kontakt" class="btn">Kontakta oss</a>
-    </header>
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
 
-    <section class="hero">
-        <div>
-            <h1>Hitta din drömbil</h1>
-            <p>Vi har ett stort utbud av kvalitetsbilar till bra priser. Välkommen att titta runt!</p>
-            <a href="#bilar" class="btn">Se våra bilar</a>
-        </div>
-        <img src="/placeholder.svg?height=300&width=400" alt="Bil">
-    </section>
+.hero img {
+    width: 100%;
+    border-radius: 10px;
+}
 
-    <section class="cars" id="bilar">
-        <h2>Våra bilar</h2>
-        <div class="car-grid">
-            <div class="car-card">
-                <img src="/placeholder.svg?height=200&width=300" alt="Volvo V70">
-                <div class="car-details">
-                    <h3>Volvo V70</h3>
-                    <p>2018 • 45 000 km • Bensin</p>
-                    <div class="car-price">249 000 kr</div>
-                    <a href="#" class="btn">Läs mer</a>
-                </div>
-            </div>
-            <div class="car-card">
-                <img src="/placeholder.svg?height=200&width=300" alt="BMW 3-serie">
-                <div class="car-details">
-                    <h3>BMW 3-serie</h3>
-                    <p>2019 • 32 000 km • Diesel</p>
-                    <div class="car-price">329 000 kr</div>
-                    <a href="#" class="btn">Läs mer</a>
-                </div>
-            </div>
-            <div class="car-card">
-                <img src="/placeholder.svg?height=200&width=300" alt="Audi A4">
-                <div class="car-details">
-                    <h3>Audi A4</h3>
-                    <p>2020 • 28 000 km • Hybrid</p>
-                    <div class="car-price">389 000 kr</div>
-                    <a href="#" class="btn">Läs mer</a>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
 
-    <section class="contact" id="kontakt">
-        <h2>Kontakta oss</h2>
-        <p>Har du frågor eller vill boka en provkörning? Hör av dig till oss!</p>
-        <p><strong>Telefon:</strong> 08-123 456 78</p>
-        <p><strong>E-post:</strong> info@bilcenter.se</p>
-    </section>
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 
-    <footer>
-        <p>&copy; 2024 BilCenter. Alla rättigheter förbehållna.</p>
-    </footer>
-</body>
-</html>
+/* Section Styles */
+.featured-cars,
+.services,
+.about-story,
+.team,
+.contact,
+.cars-listing {
+    padding: 80px 20px;
+}
+
+.services,
+.team {
+    background: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.center-button {
+    text-align: center;
+}
+
+/* Grid Layouts */
+.car-grid,
+.services-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.car-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Card Styles */
+.car-card,
+.service-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.car-card:hover,
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.car-details {
+    padding: 1.5rem;
+}
+
+.car-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.car-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 0.5rem;
+}
+
+.car-specs {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.car-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Service Cards */
+.service-card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #666;
+}
+
+/* About Page Styles */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Team Styles */
+.team-member {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-title {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.member-bio {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Contact Styles */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item i {
+    color: #e74c3c;
+    font-size: 1.2rem;
+}
+
+.address,
+.hours {
+    margin-bottom: 2rem;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.map iframe {
+    border-radius: 10px;
+}
+
+/* Form Styles */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Car Filters */
+.car-filters {
+    padding: 40px 20px;
+    background: #f8f9fa;
+}
+
+.filter-container {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.filter-group select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    min-width: 150px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 2rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .car-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-container {
+        flex-direction: column;
+    }
+    
+    .car-actions {
+        flex-direction: column;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
